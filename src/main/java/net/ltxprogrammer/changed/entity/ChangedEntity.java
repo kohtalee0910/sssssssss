@@ -444,7 +444,7 @@ public abstract class ChangedEntity extends Monster {
     public ChangedEntity(EntityType<? extends ChangedEntity> type, Level level) {
         super(type, level);
         this.setAttributes(getAttributes());
-        this.setHealth((float)this.getAttributes().getInstance(Attributes.MAX_HEALTH).getBaseValue());
+        this.setHealth((float)this.getAttributes().getInstance(Attributes.MAX_HEALTH).getBaseValue() * (getBasicPlayerInfo().getSize()));
         if (!type.is(ChangedTags.EntityTypes.ARMLESS) && this.getNavigation() instanceof GroundPathNavigation navigation)
             navigation.setCanOpenDoors(true);
 

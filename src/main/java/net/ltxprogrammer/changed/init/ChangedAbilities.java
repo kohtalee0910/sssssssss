@@ -17,6 +17,8 @@ public class ChangedAbilities {
             () -> new SimpleCreateItemAbility(() -> new ItemStack(Items.COBWEB), 5.0f, 6.0f));
     public static RegistryObject<SimpleCreateItemAbility> CREATE_INKBALL = REGISTRY.register("create_inkball",
             () -> new SimpleCreateItemAbility(() -> new ItemStack(ChangedItems.LATEX_INKBALL.get()), 5.0f, 6.0f));
+    public static RegistryObject<SimpleReplaceItemAbility> FILL_HONEY = REGISTRY.register("fill_honey",
+            () -> new SimpleReplaceItemAbility(() -> new ItemStack(Items.HONEY_BOTTLE),Items.GLASS_BOTTLE, 10.0f, 19.0f));
     public static RegistryObject<SimpleCreateItemAbility> CREATE_HONEYCOMB = REGISTRY.register("create_honeycomb",
             () -> new SimpleCreateItemAbility(() -> new ItemStack(Items.HONEYCOMB), 5.0f, 6.0f));
     public static RegistryObject<SwitchHandsAbility> SWITCH_HANDS = REGISTRY.register("switch_hands", SwitchHandsAbility::new);

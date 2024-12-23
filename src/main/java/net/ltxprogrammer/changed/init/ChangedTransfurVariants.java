@@ -44,7 +44,7 @@ public class ChangedTransfurVariants {
     public static final RegistryObject<TransfurVariant<LatexAlien>> LATEX_ALIEN = register("form_latex_alien",
             TransfurVariant.Builder.of(ChangedEntities.LATEX_ALIEN).stepSize(0.7f).nightVision().absorbing());
     public static final RegistryObject<TransfurVariant<LatexBee>> LATEX_BEE = register("form_latex_bee",
-            TransfurVariant.Builder.of(ChangedEntities.LATEX_BEE).extraJumps(4).reducedFall().extraHands().addAbility(ChangedAbilities.CREATE_HONEYCOMB).breatheMode(TransfurVariant.BreatheMode.WEAK).absorbing());
+            TransfurVariant.Builder.of(ChangedEntities.LATEX_BEE).extraJumps(4).reducedFall().extraHands().addAbility(ChangedAbilities.CREATE_HONEYCOMB).addAbility(ChangedAbilities.FILL_HONEY).breatheMode(TransfurVariant.BreatheMode.WEAK).absorbing());
     public static final RegistryObject<TransfurVariant<LatexBenignWolf>> LATEX_BENIGN_WOLF = register("form_latex_benign_wolf",
             TransfurVariant.Builder.of(ChangedEntities.BENIGN_LATEX_WOLF).noVision().absorbing().disableItems().jumpStrength(0.5F));
     public static final RegistryObject<TransfurVariant<LatexBlueDragon>> LATEX_BLUE_DRAGON = register("form_latex_blue_dragon",

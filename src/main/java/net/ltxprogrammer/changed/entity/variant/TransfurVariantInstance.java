@@ -846,6 +846,11 @@ public abstract class TransfurVariantInstance<T extends ChangedEntity> {
         this.tickTransfurProgress();
 
         host.refreshDimensions();
+
+        if (this.transfurProgression >= 1.0F && !this.isTemporaryFromSuit() && !this.previousAttributes.isEmpty() && !this.newAttributes.isEmpty() && this.getChangedEntity() != null && this.getChangedEntity().getBasicPlayerInfo() != null) {
+            host.getAttributes().getInstance(Attributes.MAX_HEALTH).setBaseValue(this.getChangedEntity().getAttribute(Attributes.MAX_HEALTH).getBaseValue() * (double)this.getChangedEntity().getBasicPlayerInfo().getSize());
+        }
+
         if (host.isOnGround())
             jumpCharges = parent.extraJumpCharges;
 
